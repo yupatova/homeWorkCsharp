@@ -2,16 +2,21 @@
 3, 5 -> 243 (3⁵)
 2, 4 -> 16 */
 
-/* Console.WriteLine("введите два числа");
+Console.WriteLine("введите два числа");
 int A = int.Parse(Console.ReadLine());
 int B = int.Parse(Console.ReadLine());
 double C = Degree(A, B);
-Console.WriteLine(A + " в степени " + B + " будет " + C); */
+Console.WriteLine(A + " в степени " + B + " будет " + C);
 
-double Degree (int x, int y)
+int Degree (int x, int y)
 {
-    double d = Math.Pow(x, y);
-    return d;
+    int deg = 1;
+    while (y>0)
+    {
+        deg = deg * x;
+        y-=1;
+    }
+    return deg;
 }
 
 /* Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
@@ -39,7 +44,7 @@ int Summ (int x)
 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 6, 1, 33 -> [6, 1, 33] */
 
-Console.WriteLine("введите размер массива");
+/* Console.WriteLine("введите размер массива");
 int S = int.Parse(Console.ReadLine());
 int [] array = new int [S];
 Console.WriteLine("теперь нужно заполнить массив. введите " + S + " чисел");
@@ -48,7 +53,7 @@ for (int i = 0; i < S; i++)
     int x = int.Parse(Console.ReadLine());
     array [i] = x;   
 }
-PrintArray (array);
+PrintArray (array); */
 
 
 
